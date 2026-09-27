@@ -1,6 +1,6 @@
 {
   "name": "easter-date-calculator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Computes the date of Easter Sunday for any given year using the computus algorithm, supporting both Gregorian and Julian calendar methods.",
   "type": "module",
   "main": "src/index.js",
