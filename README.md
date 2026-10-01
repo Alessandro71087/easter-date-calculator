@@ -26,3 +26,10 @@ One trade-off to note: the Julian function returns a JavaScript `Date` whose fie
 ## Awkward edge cases
 
 The earliest possible Easter is March 22 and the latest is April 25 in both calendars, but the years when these occur differ between the two systems. For example, Gregorian Easter is March 22 in 1818, while Julian Easter is March 22 in 1666. Tests cover these extremes to ensure the formulas are correct at the boundaries.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
